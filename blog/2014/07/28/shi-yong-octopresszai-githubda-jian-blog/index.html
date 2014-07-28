@@ -131,21 +131,15 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 <li>. 下载octopress源代码
   终端下执行:
 
-<blockquote><p>git clone git://github.com/imathis/octopress.git octopress</p></blockquote></li>
-</ol>
+<blockquote><p>git clone git://github.com/imathis/octopress.git octopress
+cd octopresscd</p></blockquote></li>
+<li><p>. 安装依赖 bundler
+  在执行以下命令时最好先切换ruby source(因为source托管在国外网站, 可能被GWF给毙掉)&mdash;> <a href="https://ruby.taobao.org">taobao soucres</a></p>
 
-
-<blockquote><p>cd octopresscd
-   4. 安装依赖 bundler</p>
-
-<pre><code>  在执行以下命令时最好先切换ruby source(因为source托管在国外网站, 可能被GWF给毙掉)--&gt; [taobao soucres](https://ruby.taobao.org)
-  &gt; gem install bundler,
-  &gt; rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command ,
-  &gt; bundle install  # 执行这个步骤前, 编辑 ~/octoperss/Gemfile, 把第一行也改为 taobao源
-</code></pre></blockquote>
-
-<ol>
-<li>. 安装默认主题
+<blockquote><p>gem install bundler,
+rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command ,
+bundle install  # 执行这个步骤前, 编辑 ~/octoperss/Gemfile, 把第一行也改为 taobao源</p></blockquote></li>
+<li><p>. 安装默认主题</p>
 
 <blockquote><p>rake install</p></blockquote></li>
 </ol>
