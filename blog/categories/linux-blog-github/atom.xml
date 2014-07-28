@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Neal Blog]]></title>
-  <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Linux Blog Github | Neal Blog]]></title>
+  <link href="http://Neal1986.github.io/blog/categories/linux-blog-github/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
   <updated>2014-07-28T18:03:15+08:00</updated>
   <id>http://Neal1986.github.io/</id>
@@ -105,17 +105,6 @@ rake deploy
 
 
 <p>关于维护blog, 可以参考这篇文章: <a href="http://shanewfx.github.io/blog/2012/02/16/clone-blog-from-github/">维护blog</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[About My Blog]]></title>
-    <link href="http://Neal1986.github.io/blog/2014/07/28/about-my-blog/"/>
-    <updated>2014-07-28T14:36:31+08:00</updated>
-    <id>http://Neal1986.github.io/blog/2014/07/28/about-my-blog</id>
-    <content type="html"><![CDATA[<pre><code>i open this blog for learning and sharing some tech about c/c++, scripts, i want to say it'a not a easy way to become a good developer.
-but with the openSource, we could get more support than fight by yourself. this page is written to myself.
-</code></pre>
 ]]></content>
   </entry>
   
