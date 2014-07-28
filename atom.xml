@@ -4,7 +4,7 @@
   <title><![CDATA[Neal Blog]]></title>
   <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-07-28T18:23:09+08:00</updated>
+  <updated>2014-07-28T18:23:59+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Neal/Chen ke]]></name>
@@ -55,18 +55,21 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 <li>. 下载octopress源代码
   终端下执行:
 
-<blockquote><p>git clone git://github.com/imathis/octopress.git octopress</p>
+<blockquote><p>git clone git://github.com/imathis/octopress.git octopress</p></blockquote></li>
+</ol>
 
-<p>cd octopresscd</p></blockquote></li>
-<li><p>. 安装依赖 bundler
-  在执行以下命令时最好先切换ruby source(因为source托管在国外网站, 可能被GWF给毙掉)&mdash;> <a href="https://ruby.taobao.org">taobao soucres</a></p>
 
-<blockquote><p>gem install bundler,</p>
+<blockquote><p>cd octopresscd
+   4. 安装依赖 bundler</p>
 
-<p>rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command ,</p>
+<pre><code>  在执行以下命令时最好先切换ruby source(因为source托管在国外网站, 可能被GWF给毙掉)--&gt; [taobao soucres](https://ruby.taobao.org)
+  &gt; gem install bundler,
+  &gt; rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command ,
+  &gt; bundle install  # 执行这个步骤前, 编辑 ~/octoperss/Gemfile, 把第一行也改为 taobao源
+</code></pre></blockquote>
 
-<p>bundle install  # 执行这个步骤前, 编辑 ~/octoperss/Gemfile, 把第一行也改为 taobao源</p></blockquote></li>
-<li><p>. 安装默认主题</p>
+<ol>
+<li>. 安装默认主题
 
 <blockquote><p>rake install</p></blockquote></li>
 </ol>
@@ -82,11 +85,9 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 <li> 生成ssh key, 详见 <a href="https://help.github.com/articles/generating-ssh-keys">生成ssh key</a>, 照着这个做. 这样你本地仓库可以与remote repo建议安全链接</li>
 <li> 终端执行
 
-<blockquote><p>rake setup_github_pages,</p>
-
-<p>rake generate,</p>
-
-<p>rake deploy
+<blockquote><p>rake setup_github_pages,
+rake generate,
+rake deploy
 这一步你的deploy里面的代码应该会提交到github对应repo. 在填写git repo link的时候 建议使用格式 git@github.com:username/username.github.io.git</p></blockquote></li>
 </ol>
 
@@ -102,9 +103,8 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
  如果编辑markdown文件-> <a href="http://jianshu.io/p/q81RER">markdown简单语法</a></p></blockquote></li>
 <li> 由于是静态博客系统, 所以每次完成写作后需要重新执行
 
-<blockquote><p>rake generate,</p>
-
-<p>rake deploy
+<blockquote><p>rake generate,
+rake deploy
 这样你的博客就发布到github上了..</p></blockquote></li>
 </ol>
 
