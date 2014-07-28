@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-07-28T14:54:32+08:00</updated>
+  <updated>2014-07-28T14:59:14+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -19,9 +19,8 @@
     <updated>2014-07-28T14:36:31+08:00</updated>
     <id>http://Neal1986.github.io/blog/2014/07/28/about-my-blog</id>
     <content type="html"><![CDATA[<pre><code>i open this blog for learning and sharing some tech about c/c++, scripts, i want to say it'a not a easy way to become a good developer.
+but with the openSource, we could get more support than fight by yourself. this page is written to myself.
 </code></pre>
-
-<p> but with the openSource, we could get more support than fight by yourself. this page is written to myself.</p>
 ]]></content>
   </entry>
   
