@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-07-28T15:10:30+08:00</updated>
+  <updated>2014-07-28T15:26:44+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -36,6 +36,11 @@ dog&rsquo;s back.</p>
 <p>This is the second paragraph in the blockquote.</p>
 
 <h2>This is an H2 in a blockquote</h2></blockquote>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">rectangle</span> <span class="n">setX</span><span class="o">:</span> <span class="mi">10</span> <span class="n">y</span><span class="o">:</span> <span class="mi">10</span> <span class="n">width</span><span class="o">:</span> <span class="mi">20</span> <span class="n">height</span><span class="o">:</span> <span class="mi">20</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
   
