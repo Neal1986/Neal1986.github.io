@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://Neal1986.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Neal Blog
+subtitle: Go nod to your way
+author: Neal/Chen ke
 simple_search: https://www.google.com/search
 description:
 
@@ -91,8 +91,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: httpneal1986githubio 
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
