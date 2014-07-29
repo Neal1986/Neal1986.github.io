@@ -72,10 +72,10 @@ github_skip_forks: true
 
 # Twitter
 twitter_user:
-twitter_tweet_button: true
+twitter_tweet_button: false 
 
 # Google +1
-google_plus_one: true
+google_plus_one: false 
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -92,11 +92,14 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: httpneal1986githubio 
-disqus_show_comment_count: true
+disqus_short_name: 
+disqus_show_comment_count: false
 
 # Google Analytics
 google_analytics_tracking_id:
 
 # Facebook Like
-facebook_like: true 
+facebook_like: false 
+
+# youyan and jiawan
+comment_share: true
