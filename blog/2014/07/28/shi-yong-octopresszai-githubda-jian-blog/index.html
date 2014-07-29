@@ -9,7 +9,7 @@
   <meta name="author" content="Neal/Chen ke">
 
   
-  <meta name="description" content="利用octopress在github上搭建blog 经过两天的折腾终于把搞起了, 其中&#8221;艰辛&#8221;不在详述. 我这里主要根据自己在搭建的过程中遇到的问题写一个总结. 由于目前markdown(写博客使用的语法)还不熟练, 所以主要以文字为主, 不过我会尽量简单.. 目的 &hellip;">
+  <meta name="description" content="经过两天的折腾终于把搞起了, 其中&#8221;艰辛&#8221;不在详述. 我这里主要根据自己在搭建的过程中遇到的问题写一个总结. 由于目前markdown(写博客使用的语法)还不熟练, 所以主要以文字为主, 不过我会尽量简单.. 目的 由于国内各大网站的blog系统带有广告及关键词限制, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,9 +94,7 @@
   </header>
 
 
-<div class="entry-content"><h1>利用octopress在github上搭建blog</h1>
-
-<p>   经过两天的折腾终于把搞起了, 其中&#8221;艰辛&#8221;不在详述. 我这里主要根据自己在搭建的过程中遇到的问题写一个总结.</p>
+<div class="entry-content"><p>   经过两天的折腾终于把搞起了, 其中&#8221;艰辛&#8221;不在详述. 我这里主要根据自己在搭建的过程中遇到的问题写一个总结.</p>
 
 <p>由于目前markdown(写博客使用的语法)还不熟练, 所以主要以文字为主, 不过我会尽量简单..</p>
 
@@ -130,15 +128,13 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 </li>
 <li>. 下载octopress源代码
   终端下执行:
-
-<blockquote><p>git clone git://github.com/imathis/octopress.git octopress
-cd octopresscd</p></blockquote></li>
+    > git clone git://github.com/imathis/octopress.git octopress
+    > cd octopresscd</li>
 <li><p>. 安装依赖 bundler
-  在执行以下命令时最好先切换ruby source(因为source托管在国外网站, 可能被GWF给毙掉)&mdash;> <a href="https://ruby.taobao.org">taobao soucres</a></p>
-
-<blockquote><p>gem install bundler,
-rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command ,
-bundle install  # 执行这个步骤前, 编辑 ~/octoperss/Gemfile, 把第一行也改为 taobao源</p></blockquote></li>
+  在执行以下命令时最好先切换ruby source(因为source托管在国外网站, 可能被GWF给毙掉)&mdash;> <a href="https://ruby.taobao.org">taobao soucres</a>
+    > gem install bundler,
+    > rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command ,
+    > bundle install  # 执行这个步骤前, 编辑 ~/octoperss/Gemfile, 把第一行也改为 taobao源</p></li>
 <li><p>. 安装默认主题</p>
 
 <blockquote><p>rake install</p></blockquote></li>
