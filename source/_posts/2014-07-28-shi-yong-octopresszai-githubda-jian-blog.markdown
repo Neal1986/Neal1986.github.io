@@ -4,6 +4,8 @@ title: "使用octopress在github搭建blog"
 date: 2014-07-28 16:04:51 +0800
 comments: true
 categories: [Linux blog github]
+tag: github octopress
+keywords: octopress github
 ---
 
    经过两天的折腾终于把搞起了, 其中"艰辛"不在详述. 我这里主要根据自己在搭建的过程中遇到的问题写一个总结.
@@ -18,6 +20,8 @@ categories: [Linux blog github]
    - 系统: centos6.5(其它linux通用)
 
 Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你在安装ruby及使用git时会遇到各种不同的问题(特指新手)
+
+<!--more-->
 
 ## 三、步骤
    参考: [octopress 官方网站](http://octopress.org/docs/)
