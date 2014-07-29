@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="经过两天的折腾终于把搞起了, 其中&#8221;艰辛&#8221;不在详述. 我这里主要根据自己在搭建的过程中遇到的问题写一个总结. 由于目前markdown(写博客使用的语法)还不熟练, 所以主要以文字为主, 不过我会尽量简单.. 一、目的 由于国内各大网站的blog系统带有广告及关键词限制 &hellip;">
-  
+  <meta name="keywords" content="octopress github">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -110,6 +110,9 @@
 
 
 <p>Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你在安装ruby及使用git时会遇到各种不同的问题(特指新手)</p>
+
+<!--more-->
+
 
 <h2>三、步骤</h2>
 
@@ -286,9 +289,53 @@
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Neal1986">@Neal1986</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Neal1986',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
 
 
 
+
+<section>
+ <h1>CATEGORY</h1>
+ <ul id="categories">
+	 <li class='category'><a href='/blog/categories/about-blog/'>about blog (1)</a></li>
+<li class='category'><a href='/blog/categories/linux-blog-github/'>linux blog github (1)</a></li>
+
+ </ul>
+</section>
+<section>
+<h1>TAG</h1>
+<ul class="tag-cloud">
+	<a style="font-size: NaN%" href="/blog/tags/github-octopress/">github octopress</a>
+
+</ul>
+</section>
 
   
 </aside>

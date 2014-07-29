@@ -4,7 +4,7 @@
   <title><![CDATA[Neal Blog]]></title>
   <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-07-29T11:54:59+08:00</updated>
+  <updated>2014-07-29T14:05:04+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Neal/Chen ke]]></name>
@@ -34,6 +34,9 @@
 
 
 <p>Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你在安装ruby及使用git时会遇到各种不同的问题(特指新手)</p>
+
+<!--more-->
+
 
 <h2>三、步骤</h2>
 

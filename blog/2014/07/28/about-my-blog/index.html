@@ -178,9 +178,53 @@
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Neal1986">@Neal1986</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Neal1986',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
 
 
 
+
+<section>
+ <h1>CATEGORY</h1>
+ <ul id="categories">
+	 <li class='category'><a href='/blog/categories/about-blog/'>about blog (1)</a></li>
+<li class='category'><a href='/blog/categories/linux-blog-github/'>linux blog github (1)</a></li>
+
+ </ul>
+</section>
+<section>
+<h1>TAG</h1>
+<ul class="tag-cloud">
+	<a style="font-size: NaN%" href="/blog/tags/github-octopress/">github octopress</a>
+
+</ul>
+</section>
 
   
 </aside>
