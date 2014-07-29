@@ -4,7 +4,7 @@
   <title><![CDATA[Neal Blog]]></title>
   <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-07-29T10:55:53+08:00</updated>
+  <updated>2014-07-29T11:09:44+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Neal/Chen ke]]></name>
@@ -22,11 +22,11 @@
 
 <p>由于目前markdown(写博客使用的语法)还不熟练, 所以主要以文字为主, 不过我会尽量简单..</p>
 
-<h2>目的</h2>
+<h2>一、目的</h2>
 
 <p>   由于国内各大网站的blog系统带有广告及关键词限制, 所以在想法在一个open的平台上来搭建博客, 另外做技术的同学的想必都知道github, 所以这里是做技术博客最合适不过的地方.</p>
 
-<h2>搭建环境</h2>
+<h2>二、搭建环境</h2>
 
 <ul>
 <li> 系统: centos6.5(其它linux通用)
@@ -34,7 +34,7 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 </ul>
 
 
-<h2>步骤</h2>
+<h2>三、步骤</h2>
 
 <p>   参考: <a href="http://octopress.org/docs/">octopress 官方网站</a></p>
 
@@ -78,7 +78,7 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 
 <p>至此安装已经完成.</p>
 
-<h2>提交博客系统</h2>
+<h2>四、提交博客系统</h2>
 
 <p>在github上新建一个repo, 命名 <em>githubusername</em>.github.io, githubusername需要替换成github用户名, 然后不用创建任何东西(github blog有两种, 本文为第一种, 还有一种是gh-pages)</p>
 
@@ -96,13 +96,13 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 </ol>
 
 
-<h2>写博客</h2>
+<h2>五、写博客</h2>
 
 <ol>
 <li> 同样官方网站说得非常清楚,所以说照着好的网站做肯定是少走弯路的. <a href="http://octopress.org/docs/blogging/">write blog with markdonw</a></li>
 <li> 终端执行
 
-<blockquote><p>rake new_post[&ldquo;title&rdquo;]
+<blockquote><p>rake new_post[&ldquo;title&rdquo;] &lt;
  生成后缀名为markdown的文件, 这样就可以使用自己习惯的写作利器,推荐使用emacs,因为它的多模式实在太强大.
  如果编辑markdown文件-> <a href="http://jianshu.io/p/q81RER">markdown简单语法</a></p></blockquote></li>
 <li> 由于是静态博客系统, 所以每次完成写作后需要重新执行
