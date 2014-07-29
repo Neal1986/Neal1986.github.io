@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux Blog Github | Neal Blog]]></title>
   <link href="http://Neal1986.github.io/blog/categories/linux-blog-github/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-07-29T11:09:44+08:00</updated>
+  <updated>2014-07-29T11:35:30+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Neal/Chen ke]]></name>
@@ -29,10 +29,11 @@
 <h2>二、搭建环境</h2>
 
 <ul>
-<li> 系统: centos6.5(其它linux通用)
-Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你在安装ruby及使用git时会遇到各种不同的问题(特指新手)</li>
+<li> 系统: centos6.5(其它linux通用)</li>
 </ul>
 
+
+<p>Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你在安装ruby及使用git时会遇到各种不同的问题(特指新手)</p>
 
 <h2>三、步骤</h2>
 
@@ -45,11 +46,15 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 
 <ul>
 <li>javascript runtime的问题, 直接yum install notejs即可</li>
-<li>ruby版本最好使用1.9.3, 当然大于些版本也可以,官网上有描述
-
-<blockquote><p>If ruby &mdash;version doesn&rsquo;t say you&rsquo;re using Ruby at least 1.9.3, revisit your rbenv or RVM installation</p></blockquote></li>
+<li>ruby版本最好使用1.9.3, 当然大于些版本也可以,官网上有描述</li>
 </ul>
 </li>
+</ol>
+
+
+<blockquote><p>If ruby &mdash;version doesn&rsquo;t say you&rsquo;re using Ruby at least 1.9.3, revisit your rbenv or RVM installation</p></blockquote>
+
+<ol>
 <li>. 下载octopress源代码
   终端下执行:
 
@@ -89,12 +94,13 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 <ul>
 <li>rake setup_github_pages,</li>
 <li>rake generate,</li>
-<li>rake deploy
-这一步你的deploy里面的代码应该会提交到github对应repo. 在填写git repo link的时候 建议使用格式 git@github.com:username/username.github.io.git</li>
+<li>rake deploy</li>
 </ul>
 </li>
 </ol>
 
+
+<p>这一步你的deploy里面的代码应该会提交到github对应repo. 在填写git repo link的时候 建议使用格式 git@github.com:username/username.github.io.git</p>
 
 <h2>五、写博客</h2>
 
@@ -102,19 +108,25 @@ Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你�
 <li> 同样官方网站说得非常清楚,所以说照着好的网站做肯定是少走弯路的. <a href="http://octopress.org/docs/blogging/">write blog with markdonw</a></li>
 <li> 终端执行
 
-<blockquote><p>rake new_post[&ldquo;title&rdquo;] &lt;
- 生成后缀名为markdown的文件, 这样就可以使用自己习惯的写作利器,推荐使用emacs,因为它的多模式实在太强大.
- 如果编辑markdown文件-> <a href="http://jianshu.io/p/q81RER">markdown简单语法</a></p></blockquote></li>
+<blockquote><p>rake new_post[&ldquo;title&rdquo;]</p></blockquote></li>
+</ol>
+
+
+<p>生成后缀名为markdown的文件, 这样就可以使用自己习惯的写作利器,推荐使用emacs,因为它的多模式实在太强大.
+如何编辑markdown文件-> <a href="http://jianshu.io/p/q81RER">markdown简单语法</a></p>
+
+<ol>
 <li> 由于是静态博客系统, 所以每次完成写作后需要重新执行
 
 <ul>
 <li>rake generate,</li>
-<li>rake deploy
-这样你的博客就发布到github上了..</li>
+<li>rake deploy</li>
 </ul>
 </li>
 </ol>
 
+
+<p>这样你的博客就发布到github上了..</p>
 
 <p>关于维护blog, 可以参考这篇文章: <a href="http://shanewfx.github.io/blog/2012/02/16/clone-blog-from-github/">维护blog</a></p>
 ]]></content>
