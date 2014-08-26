@@ -4,7 +4,7 @@
   <title><![CDATA[Neal Blog]]></title>
   <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-08-26T10:50:54+08:00</updated>
+  <updated>2014-08-26T10:58:22+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Neal/Chen ke]]></name>
@@ -29,6 +29,9 @@
 
 
 <p>  左值用&amp;表示， 右值用&amp;&amp;。</p>
+
+<!--more-->
+
 
 <p>程序1：</p>
 
@@ -59,45 +62,45 @@ int main()
 
 <p>程序2:</p>
 
-<pre><code>    #include&lt;stdio.h&gt;
-    #include&lt;string&gt;
-    #include&lt;iostream&gt;
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;string&gt;
+#include&lt;iostream&gt;
 
-    class R_value
-    {
-    private:
-        int *i;
-        R_value(R_value&amp; a): i(a.i){std::cout&lt;&lt;a.i&lt;&lt;" copy construct"&lt;&lt;std::endl;}
-        R_value&amp; operator=(R_value&amp; a) {std::cout&lt;&lt;(i=a.i)&lt;&lt;"11 equal construct"&lt;&lt;std::endl;}
+class R_value
+{
+private:
+    int *i;
+    R_value(R_value&amp; a): i(a.i){std::cout&lt;&lt;a.i&lt;&lt;" copy construct"&lt;&lt;std::endl;}
+    R_value&amp; operator=(R_value&amp; a) {std::cout&lt;&lt;(i=a.i)&lt;&lt;"11 equal construct"&lt;&lt;std::endl;}
 
-    public:
-        R_value(int* a): i(a){std::cout&lt;&lt;i&lt;&lt;"construct"&lt;&lt;std::endl;}
-        ~R_value(){std::cout&lt;&lt;i&lt;&lt;"deconstruct"&lt;&lt;std::endl;}
+public:
+    R_value(int* a): i(a){std::cout&lt;&lt;i&lt;&lt;"construct"&lt;&lt;std::endl;}
+    ~R_value(){std::cout&lt;&lt;i&lt;&lt;"deconstruct"&lt;&lt;std::endl;}
 
-        R_value(const R_value&amp; a):i(a.i){std::cout&lt;&lt;a.i&lt;&lt;"const copy construct"&lt;&lt;std::endl;}
-        R_value&amp; operator=(const R_value&amp; a) {std::cout&lt;&lt;(i=a.i)&lt;&lt;"const equal construct"&lt;&lt;std::endl;}
+    R_value(const R_value&amp; a):i(a.i){std::cout&lt;&lt;a.i&lt;&lt;"const copy construct"&lt;&lt;std::endl;}
+    R_value&amp; operator=(const R_value&amp; a) {std::cout&lt;&lt;(i=a.i)&lt;&lt;"const equal construct"&lt;&lt;std::endl;}
 
-        R_value(R_value&amp;&amp; a):i(a.i){std::cout&lt;&lt;a.i&lt;&lt;"R copy construct"&lt;&lt;std::endl;}
-        R_value&amp; operator=(R_value&amp;&amp; a){std::cout&lt;&lt;(i=a.i)&lt;&lt;"R copy construct"&lt;&lt;std::endl;}
+    R_value(R_value&amp;&amp; a):i(a.i){std::cout&lt;&lt;a.i&lt;&lt;"R copy construct"&lt;&lt;std::endl;}
+    R_value&amp; operator=(R_value&amp;&amp; a){std::cout&lt;&lt;(i=a.i)&lt;&lt;"R copy construct"&lt;&lt;std::endl;}
 
-        int&amp; operator*() const {return *i;}
-    };
+    int&amp; operator*() const {return *i;}
+};
 
-    R_value func()
-    {
-        return R_value(new int(4));
-    }
+R_value func()
+{
+    return R_value(new int(4));
+}
 
-    int main()
-    {
-        //R_value construct(new int(3));
-        //R_value Copyconstruct(construct);
-        const R_value&amp;&amp; test = func();
-        R_value a(test);
-        R_value b(std::move(a));
-        //system("pause");
-        return 0;
-    }
+int main()
+{
+    //R_value construct(new int(3));
+    //R_value Copyconstruct(construct);
+    const R_value&amp;&amp; test = func();
+    R_value a(test);
+    R_value b(std::move(a));
+    //system("pause");
+    return 0;
+}
 </code></pre>
 
 <h5>2. 精确传递(perfect Forwarding)</h5>
@@ -112,17 +115,17 @@ int main()
 
 <p>程序3：</p>
 
-<pre><code>    template&lt;typname T&gt;
-    void forward_value(T&amp;&amp; value)
-    {
-       func(value);
-    }
+<pre><code>template&lt;typname T&gt;
+void forward_value(T&amp;&amp; value)
+{
+   func(value);
+}
 
-    int valueA = 2;
-    const int&amp; valueB = 3;
-    forward_value(valueA); //int&amp;
-    forward_value(valueB); //const int&amp;
-    forward_value(4); //int&amp;&amp;
+int valueA = 2;
+const int&amp; valueB = 3;
+forward_value(valueA); //int&amp;
+forward_value(valueB); //const int&amp;
+forward_value(4); //int&amp;&amp;
 </code></pre>
 
 <p>  这样一来就不用写两个模板(const, non const)</p>
