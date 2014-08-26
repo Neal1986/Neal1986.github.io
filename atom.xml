@@ -4,7 +4,7 @@
   <title><![CDATA[Neal Blog]]></title>
   <link href="http://Neal1986.github.io/atom.xml" rel="self"/>
   <link href="http://Neal1986.github.io/"/>
-  <updated>2014-08-26T11:01:58+08:00</updated>
+  <updated>2014-08-26T11:08:08+08:00</updated>
   <id>http://Neal1986.github.io/</id>
   <author>
     <name><![CDATA[Neal/Chen ke]]></name>
@@ -115,7 +115,7 @@ int main()
 
 <p>程序3：</p>
 
-<pre><code>template&lt;typname T&gt;
+<pre><code>template&lt;typename T&gt;
 void forward_value(T&amp;&amp; value)
 {
    func(value);
