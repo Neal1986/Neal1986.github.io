@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Neal Blog</title>
+  <title>C++11 右值 - Neal Blog</title>
   <meta name="author" content="Neal/Chen ke">
 
   
   <meta name="description" content="之前学习C++11时对右值的应用理解不是很到位，所幸今天又复习了一遍。 一、左值和右值定义理解 左值通俗定义是非临时对象，可以在多条语句中使用，C++ references定义是：左值可以给存在的object一个别名，例如平时使用的变量
 右值就是临时对象，使用完成后即失效， 同样c++ &hellip;">
-  
+  <meta name="keywords" content="c++ 右值">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://Neal1986.github.io">
+  <link rel="canonical" href="http://Neal1986.github.io/blog/2014/08/25/c-plus-plus-11-you-zhi">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Neal Blog" type="application/atom+xml">
@@ -64,15 +64,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/08/25/c-plus-plus-11-you-zhi/">C++11 右值</a></h1>
+      <h1 class="entry-title">C++11 右值</h1>
     
     
       <p class="meta">
@@ -95,7 +92,7 @@
   </header>
 
 
-  <div class="entry-content"><p>   之前学习C++11时对右值的应用理解不是很到位，所幸今天又复习了一遍。</p>
+<div class="entry-content"><p>   之前学习C++11时对右值的应用理解不是很到位，所幸今天又复习了一遍。</p>
 
 <h4>一、左值和右值定义理解</h4>
 
@@ -204,78 +201,16 @@ int main()
 
 <p>  这样一来就不用写两个模板(const, non const)</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/07/28/shi-yong-octopresszai-githubda-jian-blog/">使用octopress在github搭建blog</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Neal/Chen ke</span></span>
 
-<time datetime="2014-07-28T16:04:51+08:00" pubdate data-updated="true">Jul 28<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>   经过两天的折腾终于把搞起了, 其中&#8221;艰辛&#8221;不在详述. 我这里主要根据自己在搭建的过程中遇到的问题写一个总结.</p>
-
-<p>由于目前markdown(写博客使用的语法)还不熟练, 所以主要以文字为主, 不过我会尽量简单..</p>
-
-<h2>一、目的</h2>
-
-<p>   由于国内各大网站的blog系统带有广告及关键词限制, 所以在想法在一个open的平台上来搭建博客, 另外做技术的同学的想必都知道github, 所以这里是做技术博客最合适不过的地方.</p>
-
-<h2>二、搭建环境</h2>
-
-<ul>
-<li> 系统: centos6.5(其它linux通用)</li>
-</ul>
-
-
-<p>Note: 如果准备用linux尝试搭建, 请准备好足够的耐心, 因为你在安装ruby及使用git时会遇到各种不同的问题(特指新手)</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/07/28/shi-yong-octopresszai-githubda-jian-blog/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/07/28/about-my-blog/">About My Blog</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -287,29 +222,59 @@ int main()
   
 
 
-<time datetime="2014-07-28T14:36:31+08:00" pubdate data-updated="true">Jul 28<sup>th</sup>, 2014</time>
-        
-      </p>
+<time datetime="2014-08-25T17:31:49+08:00" pubdate data-updated="true">Aug 25<sup>th</sup>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/c-plus-plus-you-zhi/'>c++ 右值</a>
+  
+</span>
+
+
+    </p>
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/07/28/shi-yong-octopresszai-githubda-jian-blog/" title="Previous Post: 使用octopress在github搭建blog">&laquo; 使用octopress在github搭建blog</a>
+      
+      
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>  i open this blog for learning and sharing some tech about c/c++ and  scripts,
-  i want to say it&#8217;a not a easy way to become a good developer.
-  but with the openSource, we could get more support than fight by yourself. this page is written to myself.</p>
-</div>
+      <div class="sharing">
   
   
-
-
-    </article>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
+  
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_renren"></a>
+  <a href="http://www.jiathis.com/share?uid=1953025" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
   </div>
+<script type="text/javascript">
+  var jiathis_config = {data_track_clickback:'true'};
+  </script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1393993392472236" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1953025"></script>
+<!-- UY END -->
+
+  
 </div>
+
+    
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -334,7 +299,7 @@ int main()
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/Neal1986">@Neal1986</a> on GitHub
@@ -382,6 +347,7 @@ int main()
 
   
 </aside>
+
 
     </div>
   </div>

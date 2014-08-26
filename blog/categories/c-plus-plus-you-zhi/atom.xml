@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: C++ 右值 | Neal Blog]]></title>
+  <link href="http://Neal1986.github.io/blog/categories/c-plus-plus-you-zhi/atom.xml" rel="self"/>
+  <link href="http://Neal1986.github.io/"/>
+  <updated>2014-08-26T10:50:54+08:00</updated>
+  <id>http://Neal1986.github.io/</id>
+  <author>
+    <name><![CDATA[Neal/Chen ke]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[C++11 右值]]></title>
+    <link href="http://Neal1986.github.io/blog/2014/08/25/c-plus-plus-11-you-zhi/"/>
+    <updated>2014-08-25T17:31:49+08:00</updated>
+    <id>http://Neal1986.github.io/blog/2014/08/25/c-plus-plus-11-you-zhi</id>
+    <content type="html"><![CDATA[<p>   之前学习C++11时对右值的应用理解不是很到位，所幸今天又复习了一遍。</p>
+
+<h4>一、左值和右值定义理解</h4>
+
+<ul>
+<li><p>左值通俗定义是非临时对象，可以在多条语句中使用，C++ references定义是：左值可以给存在的object一个别名，例如平时使用的变量</p></li>
+<li><p>右值就是临时对象，使用完成后即失效， 同样c++ references提到， 右值可用来延续一个临时变量的生命周期</p></li>
+</ul>
+
+
+<p>  左值用&amp;表示， 右值用&amp;&amp;。</p>
+
+<p>程序1：</p>
+
+<pre><code>void func(int&amp; a)
+{
+    std::cout&lt;&lt;"this is a lvalue"
+}
+
+void func(int&amp;&amp; a)
+{
+    std::cout&lt;&lt;"this is a rvalue"
+}
+
+int main()
+{
+    int value=3;
+    func(value);
+    func(100);
+}
+</code></pre>
+
+<h4>二、为什么要引进右值</h4>
+
+<h5>1. 消除对象不必要的拷贝，节省运算存储资源, 提高效率</h5>
+
+<p>   这个很好解释，如上面的代码，如果不用右值，那么在调用func(100)的时候存在一次重新构造变量a的过程。
+另外在定义class的时候，添加实现<strong>转移构造函数</strong>和<strong>转移赋值函数</strong>，可以避免对临时变量的构造和拷贝过程. 下面是示例，编译记得加C++ 11的选项。</p>
+
+<p>程序2:</p>
+
+<pre><code>    #include&lt;stdio.h&gt;
+    #include&lt;string&gt;
+    #include&lt;iostream&gt;
+
+    class R_value
+    {
+    private:
+        int *i;
+        R_value(R_value&amp; a): i(a.i){std::cout&lt;&lt;a.i&lt;&lt;" copy construct"&lt;&lt;std::endl;}
+        R_value&amp; operator=(R_value&amp; a) {std::cout&lt;&lt;(i=a.i)&lt;&lt;"11 equal construct"&lt;&lt;std::endl;}
+
+    public:
+        R_value(int* a): i(a){std::cout&lt;&lt;i&lt;&lt;"construct"&lt;&lt;std::endl;}
+        ~R_value(){std::cout&lt;&lt;i&lt;&lt;"deconstruct"&lt;&lt;std::endl;}
+
+        R_value(const R_value&amp; a):i(a.i){std::cout&lt;&lt;a.i&lt;&lt;"const copy construct"&lt;&lt;std::endl;}
+        R_value&amp; operator=(const R_value&amp; a) {std::cout&lt;&lt;(i=a.i)&lt;&lt;"const equal construct"&lt;&lt;std::endl;}
+
+        R_value(R_value&amp;&amp; a):i(a.i){std::cout&lt;&lt;a.i&lt;&lt;"R copy construct"&lt;&lt;std::endl;}
+        R_value&amp; operator=(R_value&amp;&amp; a){std::cout&lt;&lt;(i=a.i)&lt;&lt;"R copy construct"&lt;&lt;std::endl;}
+
+        int&amp; operator*() const {return *i;}
+    };
+
+    R_value func()
+    {
+        return R_value(new int(4));
+    }
+
+    int main()
+    {
+        //R_value construct(new int(3));
+        //R_value Copyconstruct(construct);
+        const R_value&amp;&amp; test = func();
+        R_value a(test);
+        R_value b(std::move(a));
+        //system("pause");
+        return 0;
+    }
+</code></pre>
+
+<h5>2. 精确传递(perfect Forwarding)</h5>
+
+<p>  精确传递就是将一组参数原封不动的传递给另外一组函数。</p>
+
+<p>在C++中除参数值外，还有以下两组属性：
+  左值和右值，const和non const.</p>
+
+<p>精确传递就是在参数传递过程中，所有这些属性和参数值都不能改变。在泛型函数中，这样的需求非常普遍.
+如以下forward_value函数将一个参数传递给另一个函数，比如程序1中的func()，</p>
+
+<p>程序3：</p>
+
+<pre><code>    template&lt;typname T&gt;
+    void forward_value(T&amp;&amp; value)
+    {
+       func(value);
+    }
+
+    int valueA = 2;
+    const int&amp; valueB = 3;
+    forward_value(valueA); //int&amp;
+    forward_value(valueB); //const int&amp;
+    forward_value(4); //int&amp;&amp;
+</code></pre>
+
+<p>  这样一来就不用写两个模板(const, non const)</p>
+]]></content>
+  </entry>
+  
+</feed>

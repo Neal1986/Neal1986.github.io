@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://Neal1986.github.io/blog/2014/08/25/c-plus-plus-11-you-zhi/</loc>
+    <lastmod>2014-08-25T17:31:49+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://Neal1986.github.io/blog/2014/07/28/shi-yong-octopresszai-githubda-jian-blog/</loc>
     <lastmod>2014-07-28T16:04:51+08:00</lastmod>
     <priority>0.8</priority>
@@ -17,14 +23,14 @@
   
   <url>
     <loc>http://Neal1986.github.io/blog/archives/</loc>
-    <lastmod>2014-07-30T15:25:21+08:00</lastmod>
+    <lastmod>2014-08-26T10:50:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://Neal1986.github.io/</loc>
-    <lastmod>2014-07-30T15:25:21+08:00</lastmod>
+    <lastmod>2014-08-26T10:50:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
